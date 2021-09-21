@@ -1,7 +1,128 @@
+/* ===== Fonts ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous', cursive; */
+
+/* ===== HTML, Body, Container ===== */
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
 #container{
     width: 75%;
     height: 100%;
     margin: auto;
     position: relative;
-    top: 3rem;
+    padding-top: 5rem;
+    background-color: #F9F6F7;
+}
+
+/* light orange FFE8D6 */
+/* orange FF971D */
+
+/* ===== Main Content ===== */
+
+#wrapper-1{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#show{
+    margin: auto;
+    width: 90%;
+    height: 70%;
+    background-color: orange;
+    padding-top: 3%;
+    padding-left: 3%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr;
+}
+
+#pic1{
+    width: 100%;
+    height: 90%;
+    background-image: url('../images/pic1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: left;
+}
+.showPics{
+    cursor: pointer;
+}
+.showPics:hover{
+    background-size: 110%;
+}
+
+#three{
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+}
+#pic2{
+    background-image: url('../images/pic2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    gap: 1%;
+}
+#pic3{
+    background-image: url('../images/pic3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    gap: 1%;
+}
+#pic4{
+    background-image: url('../images/pic4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    gap: 1%;
+}
+
+#secretContainer{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+}
+#secretImg{
+    top: 20%;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
