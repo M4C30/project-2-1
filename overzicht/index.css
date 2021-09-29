@@ -22,3 +22,43 @@ body{
     padding-top: 5rem;
     background-color: #F9F6F7;
 }
+
+#naruto{
+    margin-left: 4%;
+    width: 22%;
+}
+#onepiece{
+    width: 22%;
+    margin-left: 12%;
+}
+#db{
+    width: 22%;
+    margin-left: 14%;
+}
+#boruto{
+    width: 22%;
+    margin-left: 4%;
+}
+#jujutsu{
+    width: 22%;
+    margin-left: 12%;
+}
+#aot{
+    width: 22%;
+    margin-left: 14%;
+}
+#demon{
+    width: 22%;
+    margin-left: 4%;
+    margin-bottom: 6%;
+}
+#mha{
+    width: 22%;
+    margin-left: 12%;
+    margin-bottom: 6%;
+}
+#death{
+    width: 22%;
+    margin-left: 14%;
+    margin-bottom: 6%;
+}
