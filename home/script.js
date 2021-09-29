@@ -1,4 +1,5 @@
 let sc = document.getElementById("secretContainer");
+let si = document.getElementById("secretImg");
 
 sc.addEventListener("click", closeWin)
 
@@ -19,16 +20,16 @@ function bigImage(id){
     console.log(id);
     sc.style.display = "flex";
     if (id == "pic1"){
-        document.getElementById(id).style.backgroundImage = "url(../images/pic1.jpg)";
+        si.src = "../images/pic1.jpg";
     }
     else if (id == "pic2"){
-        document.getElementById(id).style.backgroundImage = "url(../images/pic2.jpg)";
+        si.src = "../images/pic2.jpg";
     }
     else if (id == "pic3"){
-        document.getElementById(id).style.backgroundImage = "url(../images/pic3.jpg)";
+        si.src = "../images/pic3.jpg";
     }
     else if (id == "pic4"){
-        document.getElementById(id).style.backgroundImage = 'url(../images/pic4.jpg)';
+        si.src = "../images/pic4.jpg";
     }
     
 }

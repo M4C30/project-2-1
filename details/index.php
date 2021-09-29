@@ -22,21 +22,34 @@
     <div id="header"></div>
     <div id="container">
         <div id="wrapper-1">
-            <div id="show">
-                <div class="showPics" id="pic1" onmouseover="resize(this.id)" onmouseout="reresize(this.id)" onclick="bigImage(this.id)"></div>
-                <div id="three">
-                    <div class="showPics" id="pic2" onmouseover="resize(this.id)" onmouseout="reresize(this.id)" onclick="bigImage(this.id)"></div>
-                    <div class="showPics" id="pic3" onmouseover="resize(this.id)" onmouseout="reresize(this.id)" onclick="bigImage(this.id)"></div>
-                    <div class="showPics" id="pic4" onmouseover="resize(this.id)" onmouseout="reresize(this.id)" onclick="bigImage(this.id)"></div>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>Naam: </th>
+                    <th>Schrijver: </th>
+                    <th>Uitgave: </th>
+                    <th>Beschrijving: </th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div id="wrapper-2">
+            Naam: <input type="text" id="naam">
+            Schrijver: <input type="text" id="schrijver">
+            Uitgave: <input type="text" id="uitgave">
+            Beschrijving: <input type="text" id="beschrijving">
+            <button id="send">Versturen</button>
         </div>
         <div id="footer"></div>
     </div>
-    <div id="secretContainer">
-        <div id="secretImg"></div>
-    </div>
     <script src="script.js"></script>
 </body>
+<?php
+
+?>
 
 </html>
