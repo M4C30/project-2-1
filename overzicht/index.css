@@ -22,35 +22,24 @@ body{
     padding-top: 5rem;
     background-color: #F9F6F7;
 }
-*,
-* ::before,
-* ::after {
-    box-sizing: border-box;
+
+#naruto{
+    margin-left: 4%;
+    width: 22%;
 }
-
-
-
-.split{
-    display: flex;
-    flex-direction: column;
+#onepiece{
+    width: 22%;
+    margin-left: 12%;
 }
-
-@media (min-width: 40em) {
-    .split {
-        flex-direction: row;
-    }
-    
-    .split > * {
-      flex-basis: 100%;
-    }
-
-.split > * + * {
-    margin-left: 2em;
+#db{
+    width: 22%;
+    margin-left: 14%;
 }
-
+#boruto{
+    width: 22%;
+    margin-left: 4%;
 }
-
-#img{
-    display: block;
-    max-width: 100%;
+#jujutsu{
+    width: 22%;
+    margin-left: 12%;
 }
