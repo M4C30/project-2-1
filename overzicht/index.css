@@ -22,3 +22,35 @@ body{
     padding-top: 5rem;
     background-color: #F9F6F7;
 }
+*,
+* ::before,
+* ::after {
+    box-sizing: border-box;
+}
+
+
+
+.split{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+    
+    .split > * {
+      flex-basis: 100%;
+    }
+
+.split > * + * {
+    margin-left: 2em;
+}
+
+}
+
+#img{
+    display: block;
+    max-width: 100%;
+}
