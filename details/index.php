@@ -19,10 +19,18 @@
 </head>
 
 <body>
+    <?php require_once 'process.php'; ?>
+    <?php 
+
+        $mysqli = new mysqli('localhost', 'db86699', 'plesk02M@ceo!', '86699_database') or die(mysqli_error($mysqli));
+        $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
+        
+    ?>
+    <form action="process.php" method="POST">
     <div id="header"></div>
     <div id="container">
-        <div id="wrapper-1">
-            <table>
+    <!-- <div id="wrapper-1">
+           <table>
                 <tr>
                     <th>Naam: </th>
                     <th>Schrijver: </th>
@@ -36,17 +44,18 @@
                     <td></td>
                 </tr>
             </table>
-        </div>
+        </div> -->
         <div id="wrapper-2">
-            Naam: <input type="text" id="naam">
-            Schrijver: <input type="text" id="schrijver">
-            Uitgave: <input type="text" id="uitgave">
-            Beschrijving: <input type="text" id="beschrijving">
-            <button id="send">Versturen</button>
+            <label>Naam: </label><input type="text" name="naam">
+            <label>Schrijver: </label><input type="text" name="schrijver">
+            <label>Uitgave: </label><input type="text" name="uitgave">
+            <label>Beschrijving: </label><input type="text" name="beschrijving">
+            <button type="submit" name="save" id="send">Versturen</button>
         </div>
         <div id="footer"></div>
     </div>
     <script src="script.js"></script>
+    </form>
 </body>
 <?php
 
