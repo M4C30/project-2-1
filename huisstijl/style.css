@@ -43,7 +43,7 @@ header a:hover{
     justify-content: center;
     padding-top: 2rem;
 }
-#headerTitel img{
+#logo{
     width: 300px;
     box-shadow: 1spx 5px 30px 0 black;
 }

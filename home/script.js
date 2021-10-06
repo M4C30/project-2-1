@@ -34,5 +34,19 @@ function bigImage(id){
     
 }
 
+let banner = document.getElementById("bannerDiv");
+let headerImage = document.getElementById("logo");
 
+function blurIt(){
+    banner.style.animationName = "blurIt";
+    banner.style.animationDuration = "3s";
+    banner.style.filter = "blur(0px)";
+}
 
+function getBig(){
+    headerImage.style.animationName = "bigga"
+}
+
+window.onload = function(){
+    blurIt();
+}
