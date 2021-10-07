@@ -29,6 +29,7 @@
         
     ?>
     <form action="process.php" method="POST">
+        <input type="hidden" name="ID" value="<?php echo $id;?>">
         <div id="header"></div>
         <div id="container">
             <div id="wrapper-1">
@@ -42,7 +43,7 @@
                             <th colspan="2">Action</th>
                         </tr>
                     </thead>
-                    <?php while ($row = $result->fetch_assoc()){ ?>
+                    <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
                         <td><?php echo $row['Naam']; ?></td>
                         <td><?php echo $row['Schrijver']; ?></td>
@@ -50,14 +51,14 @@
                         <td><?php echo $row['Beschrijving']; ?></td>
                         <td>
                             <div id="edit">
-                            <a href="index.php?edit=<?php echo $row['id']; ?>" >Edit</a>
+                            <a href="index.php?edit=<?=$row['ID']?>">Edit</a>
                             </div>
                             <div id="delete">
-                            <a href="process.php?delete=<?php echo $row['id'];?>" >Delete</a>
+                            <a href="process.php?delete=<?=$row['ID']?>">Delete</a>
                     </div>
                         </td>
                     </tr>
-                    <?php }; ?>
+                    <?php endwhile; ?>
                 </table>
             </div>
             <?php 
@@ -70,11 +71,15 @@
     
             ?>
             <div id="wrapper-2">
-                <label>Naam: </label><input type="text" name="naam">
-                <label>Schrijver: </label><input type="text" name="schrijver">
-                <label>Uitgave: </label><input type="text" name="uitgave">
-                <label>Beschrijving: </label><input type="text" name="beschrijving">
-                <button type="submit" name="save" id="send">Versturen</button>
+                <label>Naam: </label><input value="<?php echo $name;?>" type="text" name="Naam">
+                <label>Schrijver: </label><input value="<?php echo $writer;?>" type="text" name="Schrijver">
+                <label>Uitgave: </label><input value="<?php echo $release;?>" type="text" name="Uitgave">
+                <label>Beschrijving: </label><input value="<?php echo $desc;?>"  type="text" name="Beschrijving">
+                <?php if ($update == true):  ?>
+                    <button type="submit" name="update" class="send">Update</button>
+                    <?php else: ?>
+                <button type="submit" name="save" class="send">Versturen</button>
+                    <?php endif; ?>
             </div>
             <div id="footer"></div>
         </div>
