@@ -6,6 +6,8 @@
 /* font-family: 'Bebas Neue', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* font-family: 'Righteous', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* font-family: 'Rubik', sans-serif; */
 
 /* ===== HTML, Body, Container ===== */
 * {
@@ -29,127 +31,107 @@ body{
     position: relative;
     margin: auto;
     padding-top: 5rem;
-    background-color: #F9F6F7;
+    background-color: #eeeeee;
 }
 
 /* light orange FFE8D6 */
 /* orange FF971D */
 
 /* ===== Main Content ===== */
-#allGenres{
-    height: 50%;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-}
-.genres{
-    border: 1px solid rgb(243, 243, 243);
-    height: 10%;
-    width: 100%;
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    padding-left: 1rem;
-}
-.genres:hover{
-    background-color: rgb(238, 238, 238);
-    cursor: pointer;
-    font-weight: bold;
-}
-.genres p{
-    font-size: 100%;
-    position: relative;
-    margin: auto 0;
-    color: black;
+a{
+    text-decoration: none;
+    color: unset;
 }
 
 #wrapper-1{
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+   margin: auto;
+   width: 95%;
+   height: 90%;
+   display: flex;
+   flex-direction: row;
 }
-#show{
-    margin: auto;
-    width: 70%;
-    height: 70%;
-    background-color: orange;
-    padding-top: 3%;
-    padding-left: 3%;
-    display: grid;
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 1fr;
-}
-
-#pic1{
-    width: 100%;
+#genres{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     height: 90%;
-    background-image: url('../images/pic1.jpg');
+    width: 23%;
+    box-shadow: 1px 5px 5px 0 gray;
+}
+.genreTypes{
+    background-color: white;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(94, 94, 94);
+    font-size: 15px;
+    padding-left: 6%;
+    transition: 0.1s;
+}
+.genreTypes:hover{
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#genreTitle{
+    font-weight: bolder;
+    color: black;
+    position: relative;
+    top: 10%;
+}
+#genreTitleDiv{
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(94, 94, 94);
+    font-size: 20px;
+    padding-left: 6%;
+}
+hr{
+    background-color: gray;
+    height: 1px;
+    width: 90%;
+}
+/* Preview */
+
+#preview{
+    width: 70%;
+    height: 90%;
+    position: relative;
+    left: 5%;
+}
+#imageSlide{
+    margin: auto;
+    background-image: url("../images/homeImages/pic1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    display: flex;
-    justify-content: left;
+    background-size: cover;
+    width: 85%;
+    height: 75%;
 }
-.showPics{
+.slideImages{
+    width: 19%;
+    position: relative;
+    top: 10%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
 }
-.showPics:hover{
-    background-size: 110%;
+#selectable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:20.2%;
+    gap: 2%;
 }
-
-#three{
-    display: grid;
-    grid-template-rows: 30% 30% 30%;
+#pic1{
+    background-image: url('../images/homeImages/pic1.jpg');
 }
 #pic2{
-    background-image: url('../images/pic2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 80%;
-    height: 90%;
-    margin: auto;
-    gap: 1%;
+    background-image: url('../images/homeImages/pic2.jpg');
 }
 #pic3{
-    background-image: url('../images/pic3.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 80%;
-    height: 90%;
-    margin: auto;
-    gap: 1%;
+    background-image: url('../images/homeImages/pic3.jpg');
 }
 #pic4{
-    background-image: url('../images/pic4.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 80%;
-    height: 90%;
-    margin: auto;
-    gap: 1%;
+    background-image: url('../images/homeImages/pic4.jpg');
 }
-
-#secretContainer{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    margin: auto;
-    display: none;
-    justify-content: center;
-}
-#secretImg{
-    top: 20%;
-    position: fixed;
-    height: 60%;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-

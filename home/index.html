@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANGAKA</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-        </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $(function () {
             $("#header").load("../huisstijl/header.html");
@@ -21,58 +20,57 @@
 <body>
     <div id="header"></div>
     <div id="container">
-        <div id="outside-w">
-            <div id="allGenres">
-                <div class="genres">
-                    <p>Comedy</p>
-                </div>
-                <div class="genres">
-                    <p>Drama</p>
-                </div>
-                <div class="genres">
-                    <p>Fantasy</p>
-                </div>
-                <div class="genres">
-                    <p>Sci-Fi</p>
-                </div>
-                <div class="genres">
-                    <p>Adventure</p>
-                </div>
-                <div class="genres">
-                    <p>Slasher</p>
-                </div>
-                <div class="genres">
-                    <p>Horror</p>
-                </div>
-                <div class="genres">
-                    <p>Romance</p>
-                </div>
-                <div class="genres">
-                    <p>Mystery</p>
-                </div>
-                <div class="genres">
-                    <p>Crime</p>
-                </div>
-            </div>
-        </div>
         <div id="wrapper-1">
-            <div id="show">
-                <div class="showPics" id="pic1" onmouseover="resize(this.id)" onmouseout="reresize(this.id)"
-                    onclick="bigImage(this.id)"></div>
-                <div id="three">
-                    <div class="showPics" id="pic2" onmouseover="resize(this.id)" onmouseout="reresize(this.id)"
-                        onclick="bigImage(this.id)"></div>
-                    <div class="showPics" id="pic3" onmouseover="resize(this.id)" onmouseout="reresize(this.id)"
-                        onclick="bigImage(this.id)"></div>
-                    <div class="showPics" id="pic4" onmouseover="resize(this.id)" onmouseout="reresize(this.id)"
-                        onclick="bigImage(this.id)"></div>
+            <div id="genres">
+                <div id="genreTitleDiv">
+                    <p id="genreTitle">Genres</p>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Avontuur</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Actie</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Superhelden</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Bovennatuurlijk</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Romantiek</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Geschiedenis</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="genreTypes"><a href="../overzicht/index.html">
+                        <p>Drama</p>
+                    </a>
+                </div>
+            </div>
+            <div id="preview">
+                <div id="imageSlide"></div>
+                <div id="selectable">
+                    <div class="slideImages" id="pic1" onclick="shadow(this.id)"></div>
+                    <div class="slideImages" id="pic2" onclick="shadow(this.id)"></div>
+                    <div class="slideImages" id="pic3" onclick="shadow(this.id)"></div>
+                    <div class="slideImages" id="pic4" onclick="shadow(this.id)"></div>
                 </div>
             </div>
         </div>
-
-    </div>
-    <div id="secretContainer">
-        <img src="" id="secretImg">
     </div>
     <div id="footer"></div>
     <script src="script.js"></script>
