@@ -51,10 +51,9 @@ a{
    flex-direction: row;
 }
 #genres{
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     background-color: white;
-    height: 90%;
+    height: fit-content;
     width: 23%;
     box-shadow: 1px 5px 5px 0 gray;
 }
@@ -97,6 +96,7 @@ hr{
     position: relative;
     left: 5%;
 }
+
 #imageSlide{
     margin: auto;
     background-image: url("../images/homeImages/pic1.jpg");
@@ -107,7 +107,7 @@ hr{
     height: 75%;
 }
 .slideImages{
-    width: 19%;
+    width: 100%;
     position: relative;
     top: 10%;
     height: 100%;
@@ -117,11 +117,13 @@ hr{
     cursor: pointer;
 }
 #selectable{
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     height:20.2%;
     gap: 2%;
+    width: 85%;
 }
 #pic1{
     background-image: url('../images/homeImages/pic1.jpg');
