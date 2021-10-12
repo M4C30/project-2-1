@@ -1,23 +1,23 @@
+var slideIndex = 1;
+showDivs(slideIndex);
 
-var leftButt = document.getElementById("left");
-var rightButt = document.getElementById("right");
 
-var bgImage = document.getElementById("mainLeft");
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
 
-leftButt.addEventListener("click", function(){
-    button("left");
-});
-rightButt.addEventListener("click", function(){
-    button("right")
-});
+//setInterval(function(){
+  //  plusDivs(1);
+//},5000);;
 
-var counter = 0;
 
-function button(slide){
-    var cycle = ["url(../images/homeImages/pic1.jpg)", "url(../images/homeImages/pic2.jpg)", "url(../images/homeImages/pic3.jpg)", "url(../images/homeImages/pic4.jpg)"];
-    if (slide = "right"){
-        bgImage.style.backgroundImage = cycle[0];
-        counter++;
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
     }
-
+    x[slideIndex - 1].style.display = "block";
 }

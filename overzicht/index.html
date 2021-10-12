@@ -7,19 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANGAKA</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-        </script>
-    <script>
-        $(function () {
-            $("#header").load("../huisstijl/header.html");
-            $("#footer").load("../huisstijl/footer.html");
-        });
-    </script>
+    <link rel="stylesheet" href="../huisstijl/style.css">
 </head>
 
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <div id="headerTitel">
+            <div id="bannerDiv"></div>
+            <a href="../home">
+                <img id="logo" src="../images/logo_cropped.png" alt="logo">
+            </a>
+        </div>
+        <header id="header">
+            <a class="headerA" href="../home">
+                <div class="headerItems">Home</div>
+            </a>
+            <a class="headerA" href="../overzicht">
+                <div class="headerItems">Overzicht</div>
+            </a>
+            <a class="headerA" href="../details">
+                <div class="headerItems">Details</div>
+            </a>
+        </header>
+    </div>
     <section>
 
         <label for="genre">
@@ -83,8 +93,13 @@
             </div>
         </div>
     </section>
-    <div id="footer"></div>
+    <div id="footer">
+        <footer id="footer">
+            <h3>Made by Diego Bronsema & Maceo Beltman &copy;</h2>
+        </footer>
+    </div>
     <script src="index.js"></script>
+    <script src="../huisstijl/script.js"></script>
 </body>
 
 </html>

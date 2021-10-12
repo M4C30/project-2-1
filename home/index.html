@@ -7,35 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANGAKA</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $("#header").load("../huisstijl/header.html");
-            $("#footer").load("../huisstijl/footer.html");
-        });
-    </script>
+    <link rel="stylesheet" href="../huisstijl/style.css">
 </head>
 
 <body>
-    <div id="header"></div>
+
+    <div id="header">
+        <div id="headerTitel">
+            <div id="bannerDiv"></div>
+            <a href="../home">
+                <img id="logo" src="../images/logo_cropped.png" alt="logo">
+            </a>
+        </div>
+        <header id="header">
+            <a class="headerA" href="../home">
+                <div class="headerItems">Home</div>
+            </a>
+            <a class="headerA" href="../overzicht">
+                <div class="headerItems">Overzicht</div>
+            </a>
+            <a class="headerA" href="../details">
+                <div class="headerItems">Details</div>
+            </a>
+        </header>
+    </div>
+
+
+
     <div id="container">
         <div id="wrapper-1">
             <div id="main-left">
+                <img class="slides" src="../images/homeImages/pic1.jpg" alt="pics" id="pic1">
+                <img class="slides" src="../images/homeImages/pic2.jpg" alt="pics" id="pic2">
+                <img class="slides" src="../images/homeImages/pic3.jpg" alt="pics" id="pic3">
+                <img class="slides" src="../images/homeImages/pic4.jpg" alt="pics" id="pic4">
                 <div id="buttons">
-                    <button class="navButt" id="left">&#10094;</button>
-                    <button class="navButt" id="right">&#10095;</button>
+                    <button class="navButt" onclick="plusDivs(-1)" onclick="reset()" id="left">&#10094;</button>
+                    <button class="navButt" onclick="plusDivs(1)" onclick="reset()" id="right">&#10095;</button>
                 </div>
             </div>
             <div id="main-right">
-                <div class="sections"></div>
-                <div class="sections"></div>
-                <div class="sections"></div>
+                <div id="sec1" class="sections">
+                    <div class="frontTxt">Grootste comic verzamelaar ooit!</div>
+                </div>
+                <div id="sec2" class="sections">
+                    <div class="frontTxt">De Complete One Piece Verzameling</div>
+                </div>
+                <div id="sec3" class="sections">
+                    <div class="frontTxt">Nieuwe Superman comics?</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="footer"></div>
-    <script src="script.js"></script>
+
+        <div id="footer">
+            <footer id="footer">
+                <h3>Made by Diego Bronsema & Maceo Beltman &copy;</h2>
+            </footer>
+        </div>
+        
+
+
+        <script src="script.js"></script>
+        <script src="../huisstijl/script.js"></script>
 </body>
 
 </html>

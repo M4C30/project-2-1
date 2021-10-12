@@ -19,7 +19,8 @@
 html{
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #eeeeee;
+    
 }
 body{
     width: 100%;
@@ -34,17 +35,22 @@ body{
     margin: auto;
     padding-top: 3rem;
     background-color: #eeeeee;
+    
 }
+
 
 /* light orange FFE8D6 */
 /* orange FF971D */
+
+
 
 /* ===== Wrappers ===== */
 #wrapper-1{
     margin: auto;
     width: 90%;
     height: 70%;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Top Content */
@@ -52,22 +58,35 @@ body{
 #main-left{
     position: relative;
     left: 2.5%;
-    width: 65%;
-    height: 90%;
-    border: 1px solid black;
-    background-image: url("../images/homeImages/pic2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 150%;
+    height: 100%;
+    overflow: hidden;
 }
 
+.slides{
+   width: 100%;
+}
+#pic1{
+    height: 100%;
+}
+#pic2{
+    height: 100%;
+    width: 120%;
+    position: relative;
+    left: -10%;
+}
+#pic4{
+    height: 100%;
+}
 /* Left & Right Buttons */
 #buttons{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    z-index: 3;
+    top: 0;
 }
 .navButt{
     display: inline-block;
@@ -79,10 +98,65 @@ body{
     height: 10%;
     font-size: x-large;
     position: relative;
-    top: auto;
+    top: 7%;
 }
 .navButt:hover{
     background-color: rgba(255, 255, 255, 0.15);
     cursor: pointer;
 }
 
+/* Main Right */
+#main-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sections{
+    margin: auto;
+    width: 60%;
+    height: 31%;
+    background-color: lightgreen;
+    position: relative;
+    transition: 0.5s;
+}
+#sec1:hover,#sec2:hover,#sec3:hover{
+    transition: 0.5s;
+    background-size: 110%;
+    cursor: pointer;
+}
+#sec1{
+    background-image: url(../images/homeImages/sectionImg/big.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#sec2{
+    background-image: url(../images/homeImages/sectionImg/onepiece.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#sec3{
+    background-image: url(../images/homeImages/sectionImg/supaman.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.frontTxt{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.541);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: left;
+    padding-left: 0.2rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
