@@ -1,3 +1,18 @@
+/* ===== Fonts ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* font-family: 'Rubik', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+/* font-family: 'Alata', sans-serif; */
+
+
+
 /* ===== HTML, Body, Container ===== */
 * {
     box-sizing: border-box;
@@ -50,4 +65,11 @@ th{
 }
 .alert-danger{
     color: red;
+}
+td img{
+    width: 20%;
+}
+h1{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
 }

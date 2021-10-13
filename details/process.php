@@ -7,13 +7,15 @@ $name = "";
 $writer = "";
 $release = "";
 $desc = "";
+$img = "";
 if (isset($_POST['save'])){
      $name = $_POST['Naam'];
      $writer = $_POST['Schrijver'];
      $release = $_POST['Uitgave'];
      $desc = $_POST['Beschrijving'];
+     $img = $_POST ['img'];
     
-     $mysqli->query("INSERT INTO back12_manga (Naam, Schrijver, Uitgave, Beschrijving) VALUES('$name', '$writer', '$release', '$desc')") or
+     $mysqli->query("INSERT INTO back12_manga (Naam, Schrijver, Uitgave, Beschrijving, img) VALUES('$name', '$writer', '$release', '$desc', $img)") or
      die ($mysqli->error);
 
      $_SESSION['message'] = "Record has been saved!";
@@ -42,6 +44,7 @@ if (isset($_GET['edit'])){
           $writer = $row['Schrijver'];
           $release = $row['Uitgave'];
           $desc = $row['Beschrijving'];
+          $img = $row['img'];
      }
      
 }
@@ -52,7 +55,8 @@ if (isset($_POST['update'])){
      $writer = $_POST['Schrijver'];
      $release = $_POST['Uitgave'];
      $desc = $_POST['Beschrijving'];
-     $query = "UPDATE back12_manga SET Naam='$name', Schrijver='$writer', Uitgave='$release', Beschrijving='$desc' WHERE ID=$id";
+     $img = $_POST['img'];
+     $query = "UPDATE back12_manga SET Naam='$name', Schrijver='$writer', Uitgave='$release', Beschrijving='$desc', img='$img' WHERE ID=$id";
      echo($query);
      if(!$mysqli->query($query)){
           echo("error: " . $mysqli->error);

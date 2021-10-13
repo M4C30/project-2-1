@@ -11,6 +11,19 @@
 </head>
 
 <body>
+    <div id="information">
+        <div id="image">
+            <img id="imgSlot" src="" alt="">
+        </div>
+        <div id="textSlot">
+            <h1 id="imgTitle">a</h1>
+            <p id="imgInfo"></p>
+        </div>
+        <div id="ex" onclick="sluit()">
+            &#10006;
+        </div>
+    </div>
+    <div id="all">
     <div id="header">
         <div id="headerTitel">
             <div id="bannerDiv"></div>
@@ -30,74 +43,102 @@
             </a>
         </header>
     </div>
+    
     <section>
-
-        <label for="genre">
-            <h1>Choose your genre:</h1>
-        </label>
-        <select id="genre">
-            <option value="Manga">Manga</option>
-            <option value="Comics">Comics</option>
-
-        </select>
-    </section>
-    <section>
-        <div id="container">
-            <div>
-                <img id="naruto" src="../images/narutovol1.jpeg" alt="">
-                <img id="onepiece" src="../images/onepiecevol1.jpeg" alt="">
-                <img id="db" src="../images/dbvol1.jpeg" alt="">
+        <div class="container">
+            <div id="filterC">
+                <label for="select">Filteren op: </label>
+                <select name="select" id="selectOp">
+                    <option value="nope">Geen filter</option>
+                    <option value="manga">Manga</option>
+                    <option value="comics">Comics</option>
+                </select>
             </div>
         </div>
     </section>
 
-    <section>
-        <div id="container">
-            <div>
-                <img id="boruto" src="../images/borutovol1.jpeg" alt="">
-                <img id="jujutsu" src="../images/jjkvol1.jpeg" alt="">
-                <img id="aot" src="../images/aotvol1.jpeg" alt="">
+    <!--Manga-->
+    <div class="manga">
+        <section class="sects">
+            <div class="container">
+                <div>
+                    <img class="selectImg" onclick="popUp(this.id)" id="naruto" src="../images/comics/Naruto.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="onepiece" src="../images/comics/One Piece.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="db" src="../images/comics/Dragon Ball.jpeg"
+                        alt="">
+                </div>
             </div>
-    </section>
-    <section>
-        <div id="container">
-            <div>
-                <img id="demon" src="../images/demonvol1.jpeg" alt="">
-                <img id="mha" src="../images/mhavol1.jpeg" alt="">
-                <img id="death" src="../images/deathnotevol1.jpeg" alt="">
+        </section>
+
+        <section class="sects">
+            <div class="container">
+                <div>
+                    <img class="selectImg" onclick="popUp(this.id)" id="boruto" src="../images/comics/Boruto.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="jujutsu"
+                        src="../images/comics/Jujutsu Kaisen.jpeg" alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="aot" src="../images/comics/Attack on Titan.jpeg"
+                        alt="">
+                </div>
+        </section>
+        <section class="sects">
+            <div class="container">
+                <div>
+                    <img class="selectImg" onclick="popUp(this.id)" id="demon" src="../images/comics/Demon Slayer.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="mha"
+                        src="../images/comics/My Hero Academia.jpeg" alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="death" src="../images/comics/Death Note.jpeg"
+                        alt="">
+                </div>
             </div>
-        </div>
-    </section>
-    <div>
-        <img id="naruto" src="../images/comics/superbitch.jpg" alt="">
-        <img id="onepiece" src="../images/comics/iron.jpg" alt="">
-        <img id="db" src="../images/comics/flahs.jpeg" alt="">
+        </section>
     </div>
-    </div>
-    </section>
 
-    <section>
-        <div id="container">
+    <!--Comics-->
+    <div class="comics">
+        <section class="sects">
             <div>
-                <img id="boruto" src="../images/comics/batgirl.jpeg" alt="">
-                <img id="jujutsu" src="../images/comics/the-incredible-hulk-nummer-376-marvel-comics-1.jpeg" alt="">
-                <img id="aot" src="../images/comics/thor.jpeg" alt="">
+                <img class="selectImg" onclick="popUp(this.id)" id="superman" src="../images/comics/Superman.jpg"
+                    alt="">
+                <img class="selectImg" onclick="popUp(this.id)" id="ironman" src="../images/comics/Iron Man.jpg" alt="">
+                <img class="selectImg" onclick="popUp(this.id)" id="flash" src="../images/comics/Flash.jpeg" alt="">
             </div>
-    </section>
-    <section>
-        <div id="container">
-            <div>
-                <img id="demon" src="../images/comics/wonderkech.jpeg" alt="">
-                <img id="mha" src="../images/comics/cpa.jpeg" alt="">
-                <img id="death" src="../images/comics/black.jpeg" alt="">
+        </section>
+
+        <section class="sects">
+            <div class="container">
+                <div>
+                    <img class="selectImg" onclick="popUp(this.id)" id="batman" src="../images/comics/Batman.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="hulk"
+                        src="../images/comics/The Incredible Hulk.jpeg" alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="thor"
+                        src="../images/comics/The Mighty Thor.jpeg" alt="">
+                </div>
+        </section>
+        <section class="sects">
+            <div class="container">
+                <div>
+                    <img class="selectImg" onclick="popUp(this.id)" id="wonderwoman"
+                        src="../images/comics/Wonder Woman.jpeg" alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="cap" src="../images/comics/Captain America.jpeg"
+                        alt="">
+                    <img class="selectImg" onclick="popUp(this.id)" id="panther"
+                        src="../images/comics/Black Panther.jpeg" alt="">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <div id="footer">
         <footer id="footer">
             <h3>Made by Diego Bronsema & Maceo Beltman &copy;</h2>
         </footer>
     </div>
+</div>
+</div>
     <script src="index.js"></script>
     <script src="../huisstijl/script.js"></script>
 </body>
