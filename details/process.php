@@ -8,15 +8,18 @@ $writer = "";
 $release = "";
 $desc = "";
 $img = "";
+
 if (isset($_POST['save'])){
      $name = $_POST['Naam'];
      $writer = $_POST['Schrijver'];
      $release = $_POST['Uitgave'];
      $desc = $_POST['Beschrijving'];
-     $img = $_POST ['img'];
-    
-     $mysqli->query("INSERT INTO back12_manga (Naam, Schrijver, Uitgave, Beschrijving, img) VALUES('$name', '$writer', '$release', '$desc', $img)") or
-     die ($mysqli->error);
+     $img = $_POST['img'];
+     $statement = $mysqli->prepare("INSERT INTO back12_manga (Naam, Schrijver, Uitgave, Beschrijving, img) VALUES(?, ?, ?, ?, ?)");
+     $statement->bind_param("sssss", $name, $writer, $release, $desc, $img);
+     $statement->execute();
+     
+
 
      $_SESSION['message'] = "Record has been saved!";
      $_SESSION['msg_type'] = "success";
@@ -65,4 +68,5 @@ if (isset($_POST['update'])){
      }
      #var_dump($mysqli);
 }
+
 ?>

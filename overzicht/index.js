@@ -4,11 +4,12 @@ let allManga = document.getElementsByClassName("manga");
 let allComics = document.getElementsByClassName("comics");
 let all = document.getElementsByClassName("sects");
 
-let info = select.options[select.selectedIndex];
 
 select.addEventListener("click", take);
 
 function take() {
+
+
     if (select.value == "manga") {
         for (var i = 0; i < allComics.length; i++) {
             allComics[i].style.display = "none";
@@ -47,9 +48,9 @@ let infoDiv = document.getElementById("information");
 
 function popUp(n) {
 
-document.getElementById("all").style.pointerEvents = "none";
+    document.getElementById("all").style.pointerEvents = "none";
 
-infoDiv.style.display = "grid";
+    infoDiv.style.display = "grid";
 
 
 
@@ -60,14 +61,14 @@ infoDiv.style.display = "grid";
     let imgInfo = tttimgInfo.replaceAll("%20", " ");
 
 
-    
+
     console.log(imgInfo);
 
     imgSlot.src = imgSrc;
     imgTitle.innerHTML = imgInfo;
 }
 
-function sluit(){
+function sluit() {
     infoDiv.style.display = "none";
     document.getElementById("all").style.pointerEvents = "visible";
 }

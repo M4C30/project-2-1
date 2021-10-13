@@ -40,9 +40,10 @@
             </a>
         </header>
     </div>
+
+
     <h1>Voeg hier Manga/Comics toe die nog niet op de website staan!</h1>
         <input type="hidden" name="ID" value="<?php echo $id;?>">
-        <div id="header"></div>
         <div id="container">
             <div id="wrapper-1">
                 <table class="table">
