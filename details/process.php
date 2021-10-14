@@ -15,10 +15,16 @@ if (isset($_POST['save'])){
      $release = $_POST['Uitgave'];
      $desc = $_POST['Beschrijving'];
      $img = $_POST['img'];
+     
+     $name = str_replace(["<", ">"], ["&lt;", "&gt;"], $name);
+     $writer = str_replace(["<", ">"], ["&lt;", "&gt;"], $writer);
+     $release = str_replace(["<", ">"], ["&lt;", "&gt;"], $release);
+     $desc = str_replace(["<", ">"], ["&lt;", "&gt;"], $desc);
+     $img = str_replace(["<", ">"], ["&lt;", "&gt;"], $img);
+
      $statement = $mysqli->prepare("INSERT INTO back12_manga (Naam, Schrijver, Uitgave, Beschrijving, img) VALUES(?, ?, ?, ?, ?)");
      $statement->bind_param("sssss", $name, $writer, $release, $desc, $img);
      $statement->execute();
-     
 
 
      $_SESSION['message'] = "Record has been saved!";
@@ -41,6 +47,8 @@ if (isset($_GET['edit'])){
      $update = true;
      $result = $mysqli->query("SELECT * FROM back12_manga WHERE ID=$id") or die ($mysqli->error());
 
+    
+
      if (count($result)==1){
           $row = $result->fetch_array();
           $name = $row['Naam'];
@@ -52,21 +60,29 @@ if (isset($_GET['edit'])){
      
 }
 if (isset($_POST['update'])){
-     var_dump($_POST);
      $id = $_POST['ID'];
      $name = $_POST['Naam'];
      $writer = $_POST['Schrijver'];
      $release = $_POST['Uitgave'];
      $desc = $_POST['Beschrijving'];
      $img = $_POST['img'];
-     $query = "UPDATE back12_manga SET Naam='$name', Schrijver='$writer', Uitgave='$release', Beschrijving='$desc', img='$img' WHERE ID=$id";
-     echo($query);
-     if(!$mysqli->query($query)){
-          echo("error: " . $mysqli->error);
-     }else{
-          header('location: index.php');
-     }
-     #var_dump($mysqli);
+
+     $name = str_replace(["<", ">"], ["&lt;", "&gt;"], $name);
+     $writer = str_replace(["<", ">"], ["&lt;", "&gt;"], $writer);
+     $release = str_replace(["<", ">"], ["&lt;", "&gt;"], $release);
+     $desc = str_replace(["<", ">"], ["&lt;", "&gt;"], $desc);
+     $img = str_replace(["<", ">"], ["&lt;", "&gt;"], $img);
+
+
+     $statement = $mysqli->prepare("UPDATE back12_manga SET Naam=?, Schrijver=?, Uitgave=?, Beschrijving=?, img=? WHERE ID=?");
+     $statement->bind_param("sssssi", $name, $writer, $release, $desc, $img, $id);
+     $statement->execute();
+     
+
+     
+          header("location: index.php");
+     
+     #var_dump($statement);
 }
 
 ?>
